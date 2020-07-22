@@ -1,0 +1,28 @@
+.layer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.layer > * {
+  margin-right: 5px;
+}
+
+.layer.active {
+  background-color: #888;
+}
+
+.main-panel {
+  display: flex;
+}
+
+.main-panel > * {
+  margin-right: 10px;
+}
+
+.main-panel p {
+  margin-bottom: 10px;
+}

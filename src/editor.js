@@ -10,6 +10,10 @@ import {
 } from '@ant-design/icons'
 import './editor.css'
 
+function randomColor(){
+  return '#'+Math.floor(Math.random()*16777215).toString(16);
+}
+
 function getBase64(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
@@ -112,12 +116,11 @@ export default class Editor extends Component {
     const rect = new fabric.Rect({
       left: 100,
       top: 50,
-      fill: 'yellow',
+      fill: randomColor(),
       width: 200,
       height: 100,
       objectCaching: false,
-      stroke: 'lightgreen',
-      strokeWidth: 4,
+      hasRotatingPoint: true
     })
     const name = `rect_${count++}`
     rect.on('selected', () => this.onShapeSelect(name))
